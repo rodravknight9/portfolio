@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+.bg-sky {
+  background-color: #87ceeb; /* Sky blue */
+  background-image: url('/skybackground.jpg');
+  background-size: cover;
+}
