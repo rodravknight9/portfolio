@@ -19,7 +19,7 @@ function Model() {
     modelRef.current.position.sub(center);
 
     const size = box.getSize(new THREE.Vector3()).length();
-    const scale = 3;
+    const scale = 3; // size;
     model.scale.set(scale, scale, scale);
 
     const distance = (size * 1.8) / scale;
@@ -40,7 +40,7 @@ function Model() {
 
 const Plane = () => {
     return (
-        <div className='w-full h-screen z-10 h-screen w-screen bg-sky'>
+        <div className='w-full h-screen z-10 bg-sky'>
             <Canvas>
                 <directionalLight position={[10, 4, 5]} intensity={8} />
                 <ambientLight intensity={6} />

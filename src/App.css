@@ -2,6 +2,6 @@
 
 .bg-sky {
   background-color: #87ceeb; /* Sky blue */
-  background-image: url('/skybackground.jpg');
+  background-image: url('/skyclouds.jpg');
   background-size: cover;
 }
