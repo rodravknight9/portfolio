@@ -2,11 +2,11 @@ import { projects } from '../data'
 
 const ProjectCard = ({ project }) => {
     return (
-        <div className="bg-gray-950 p-12 my-6 border-2 border-gray-800 transition delay-150 duration-300 ease-in-out hover:border-indigo-900">
+        <div className="bg-gray-950 p-12 my-6 w-1/3 border-2 border-gray-800 transition delay-150 duration-300 ease-in-out hover:border-indigo-900">
             <img 
                 src={project.image} 
                 alt={project.title} 
-                className="w-2/5 h-80 object-cover justify-self-center border-2 border-indigo-900 " 
+                className="w-3/5 h-80 object-cover justify-self-center border-2 border-indigo-900 " 
                 />
             <h1 className="text-2xl font-semibold mt-4 justify-self-center">{project.title}</h1>
             <div className='my-6 px-3'>
@@ -33,10 +33,12 @@ const ProjectCard = ({ project }) => {
 
 export const Projects = () => {
     return (
-        <div className='justify-self-center py-10 w-2/3'>
+        <div className='justify-self-center py-10 w-full'>
              <h1 className='text-4xl mt-10 mb-12 font-semibold justify-self-center'>Projects</h1>
-             {projects.map((project) => (
-                <ProjectCard key={project.id} project={project} />))}
+             <div className='flex flex-row justify-center gap-10 flex-wrap'>
+                {projects.map((project) => (
+                    <ProjectCard key={project.id} project={project} />))}
+             </div>
         </div>
     )
 }
