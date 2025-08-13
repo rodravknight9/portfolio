@@ -2,6 +2,10 @@
 
 .bg-sky {
   background-color: #87ceeb; /* Sky blue */
-  background-image: url('/skyclouds.jpg');
+  background-image: url('/skynight.jpg');
   background-size: cover;
+}
+
+.sky-gradient {
+  background: linear-gradient(to bottom, #0220A5 0%, #0A0D21 25%); /* Sky blue to light blue */
 }
