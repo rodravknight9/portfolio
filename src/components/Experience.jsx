@@ -1,12 +1,49 @@
-import React from 'react'
+import { useState } from 'react'
+import { experience } from '../data'
+
+const ExperienceTitle = ({ isActive, experience, onClick }) => {
+    return (
+        <ul
+            onClick={onClick} 
+            className={`py-5 px-10 text-xl cursor-pointer ${isActive ? 'border-l-4 border-indigo-300 text-indigo-300' : ''}`}
+        >
+            { experience.companyName }
+        </ul>
+    )
+}
+
+const ExperienceDescription = ({ experience }) => {
+    return (
+        <div className="grid grid-cols-4 grid-rows-[2fr,3fr]">
+            <p className="col-span-3 font-bold text-2xl pb-9">{experience.title}</p>
+            <p className='justify-self-end text-xl'>{experience.duration}</p>
+            <p className='col-span-4 text-xl bg-'>{experience.description}</p>
+        </div>
+    )
+}
 
 const Experience = () => {
+
+    const [selectedExperience, setSetselectedExperience] = useState(experience[0]);
+
     return (
-        <div>
-            <h1 className='text-3xl font-bold text-center mt-10'>Experience</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora quia rerum numquam. 
-                Molestias explicabo ipsam nisi ab a veniam. 
-                Quidem iure culpa quos beatae aliquid, nesciunt quibusdam nulla earum totam.</p>
+        <div className='justify-self-center w-2/3 py-10'>
+            <div className='grid grid-cols-12 p-10 gap-5'>
+                <h1 className='text-3xl font-bold mt-10 col-span-12 mb-12'>Experience</h1>
+                <li className='list-none col-span-3 bg-slate-950 py-3'>
+                    {experience.map((exp, index) => (
+                        <ExperienceTitle 
+                            key={index} 
+                            isActive={selectedExperience === exp} 
+                            experience={exp}
+                            onClick={() => setSetselectedExperience(exp)}
+                        />
+                    ))}
+                </li>
+                <div className="col-span-9">
+                    <ExperienceDescription experience={selectedExperience} />
+                </div>
+            </div>
         </div>
     )
 }
