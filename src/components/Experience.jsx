@@ -22,7 +22,7 @@ const ExperienceDescription = ({ experience }) => {
     )
 }
 
-const Experience = () => {
+export const Experience = () => {
 
     const [selectedExperience, setSetselectedExperience] = useState(experience[0]);
 
@@ -47,5 +47,3 @@ const Experience = () => {
         </div>
     )
 }
-
-export default Experience

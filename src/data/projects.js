@@ -13,7 +13,7 @@ export const projects = [
         description: 'A comprehensive inventory management system for drugstores to track stock levels, sales, and orders.',
         image: 'https://a.storyblok.com/f/122804/1600x1000/d8bafe91e5/system-software.webp',
         githubLink: '',
-        technologies: 'React, Node.js, MongoDB',
+        technologies: 'ASP.NET Core (C#), React (TypeScript), AWS (EBS, Route53, EC2, Security Gropus), PostgreSQL, Docker, Docker Compose, SCSS, Dapper, Git, GitLab, GitLab CI/CD, Nginx, Figma, Docsify, Diagram.net',
     },
     {
         id: 'LXLRN',

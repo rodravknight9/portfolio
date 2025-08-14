@@ -37,7 +37,7 @@ function Model() {
 }
 
 
-const Plane = () => {
+export const Plane = () => {
     return (
         <div className='w-full h-screen z-10 bg-sky'>
             <Canvas>
@@ -51,5 +51,3 @@ const Plane = () => {
         </div>
     )
 }
-
-export default Plane

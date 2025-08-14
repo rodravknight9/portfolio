@@ -1,25 +1,11 @@
 import { resources } from '../data';
+import { Resource } from './Resource';
 
-const Resource = ({ href, icon }) => {
-    return (
-        <div>
-            <a  
-                href={href}
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="mx-2 mt-4 inline-block text-3xl py-2 px-3 border-2 border-gray-900 transition delay-150 duration-300 ease-in-out hover:border-indigo-300 hover:cursor-pointer"
-            >
-                <i class={`${icon} text-lg font-light text-indigo-300 hover:text-indigo-300`}></i>
-            </a>
-        </div>
-    )
-}
-
-const AboutMe = () => {
+export const AboutMe = () => {
     return (
         <div className='justify-self-center w-3/5 py-20'>
-            <h1 className='text-3xl font-bold mt-10 col-span-12 mb-12'>About Me</h1>
-            <div className='flex flex-col gap-6 text-xl'>
+            <h1 className='text-3xl font-bold mt-10 col-span-12 mb-2'>About Me</h1>
+            <div className='flex flex-col gap-3 text-xl'>
                 <h2 className='text-indigo-300 font-bold'>#OpenToWork</h2>
                 <h2 className='font-bold'>Software Engineer</h2>
                 <p>
@@ -38,6 +24,3 @@ const AboutMe = () => {
         </div>
     )
 }
-
-export default AboutMe
-//#A54DBB

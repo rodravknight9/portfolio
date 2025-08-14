@@ -24,7 +24,7 @@ const ProjectCard = ({ project }) => {
                     rel="noopener noreferrer" 
                     className="mx-2 mt-4 inline-block text-3xl"
                 >
-                    <i class="fa-brands fa-github text-white hover:text-indigo-300"></i>
+                    <i className="fa-brands fa-github text-white hover:text-indigo-300"></i>
                 </a>
             )}
         </div>
