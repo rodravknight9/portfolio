@@ -1,13 +1,17 @@
 
 import './App.css';
 import { AboutMe, Experience, Footer, Plane, Projects, Services, Contact } from './components';
+import Hero from './components/Hero';
 
 function App() {
 
    return (
     <div className='w-full h-screen'>
-      <Plane />
-      <div className='sky-gradient' id='about-me'>
+      <div>
+        <Hero />
+      </div>
+      {/* <Plane />  */}
+      <div className='sky-gradient z-30' id='about-me'>
         <AboutMe />
       </div>
       <div className='w-full bg-gray-950' id='experience'>

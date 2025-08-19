@@ -3,7 +3,7 @@ import { Resource } from './Resource';
 
 export const AboutMe = () => {
     return (
-        <div className='justify-self-center w-3/5 py-20'>
+        <div className='justify-self-center w-3/5 py-40'>
             <h1 className='text-3xl font-bold mt-10 col-span-12 mb-2'>About Me</h1>
             <div className='flex flex-col gap-3 text-xl'>
                 <h2 className='text-indigo-300 font-bold'>#OpenToWork</h2>
