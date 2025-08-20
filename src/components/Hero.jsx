@@ -27,7 +27,7 @@ const Hero = () => {
             <img className="parallax__upperleft" src="./parallax/upperleft.png" alt="" />
             <img className="parallax__upperright" src="./parallax/upperright.png" alt="" />
 
-            <div className='z-1000 w-full h-screen absolute top-0 left-0 bg-transparent'>
+            <div className='z-10 w-full h-screen absolute top-0 left-0 bg-transparent'>
                 <Plane />
             </div>
         </section>

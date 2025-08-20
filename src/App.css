@@ -10,6 +10,16 @@
   background: linear-gradient(to bottom, #0220A5 0%, #0A0D21 25%); /* Sky blue to light blue */
 }
 
+.wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px;
+}
+
+.hero {
+  z-index: -1;
+}
 
 .parallax {
   position: relative;
@@ -86,4 +96,8 @@
   to {
     transform: translateY(calc(var(--parallax-speed) * 1vh));
   }
+}
+
+.zindex-15 {
+  z-index: 15;
 }

@@ -6,28 +6,29 @@ import Hero from './components/Hero';
 function App() {
 
    return (
-    <div className='w-full h-screen'>
-      <div>
-        <Hero />
-      </div>
-      {/* <Plane />  */}
-      <div className='sky-gradient z-30' id='about-me'>
-        <AboutMe />
-      </div>
-      <div className='w-full bg-gray-950' id='experience'>
-        <Experience />
-      </div>
-      <div className='w-full' id='projects'>
-        <Projects />
-      </div>
-      <div className='w-full bg-gray-950' id='services'>
-        <Services />
-      </div>
-      <div className='w-full'>
-        <Contact />
-      </div>
-      <div className="w-full bg-gray-950">
-        <Footer />
+    <div className='relative z-0'>
+      <div className='wrapper'>
+        <div className='w-full hero z-10'>
+          <Hero />
+        </div>
+        <div className='sky-gradient z-30' id='about-me'>
+          <AboutMe />
+        </div>
+        <div className='w-full bg-gray-950' id='experience'>
+          <Experience />
+        </div>
+        <div className='w-full' id='projects'>
+          <Projects />
+        </div>
+        <div className='w-full bg-gray-950' id='services'>
+          <Services />
+        </div>
+        <div className='w-full'>
+          <Contact />
+        </div>
+        <div className="w-full bg-gray-950">
+          <Footer />
+        </div>
       </div>
     </div>
   );
