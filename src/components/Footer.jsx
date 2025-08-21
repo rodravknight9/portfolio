@@ -5,6 +5,10 @@ import { Resource } from './Resource'
 
 const sections = [
     {
+        sectionName: 'Hero',
+        sectionLink: '#hero'
+    },
+    {
         sectionName: 'About Me',
         sectionLink: '#about-me'
     },
@@ -58,7 +62,7 @@ export const Footer = () => {
                     />))}
             </div>
              <div className='flex flex-row gap-4 text-2xl mt-8'>
-                <p className='text-lg'>Inspired by the Forrest Knight| Made in React</p>
+                <p className='text-lg'>Inspired by the Forrest Knight's portfolio | Made in React</p>
             </div>
         </div>
     )

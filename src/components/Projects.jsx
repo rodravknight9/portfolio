@@ -34,7 +34,7 @@ const ProjectCard = ({ project }) => {
 export const Projects = () => {
     return (
         <div className='justify-self-center py-10 w-full'>
-             <h1 className='text-4xl mt-10 mb-12 font-semibold justify-self-center'>Projects</h1>
+             <h1 className='text-3xl mt-10 mb-12 font-semibold justify-self-center'>Projects</h1>
              <div className='flex flex-row justify-center gap-10 flex-wrap'>
                 {projects.map((project) => (
                     <ProjectCard key={project.id} project={project} />))}

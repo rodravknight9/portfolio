@@ -1,7 +1,7 @@
 export const services = [
     {
         name: 'Backend Development',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam commodi perfer'
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam commodi perfer Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam commodi perfer Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam commodi perfer'
     },
     {
         name: 'Frontend Development',
