@@ -1,10 +1,8 @@
 @import "tailwindcss";
 
-.bg-sky {
-  background-color: #87ceeb; /* Sky blue */
-  background-image: url('/skynight.jpg');
-  background-size: cover;
-}
+ @theme {
+    --color-theme: #0a0d21;
+  }
 
 .sky-gradient {
   background: linear-gradient(to bottom, #0220A5 0%, #0A0D21 25%); /* Sky blue to light blue */
@@ -23,19 +21,9 @@
 
 .parallax {
   position: relative;
-  min-height: 75vh;
-  min-width: 2000px;
-  width: 100%;
-  left: 50%; /* Center the image horizontally */
-  transform: translateX(-50%); /* Center the image horizontally */
-  display: grid;
-  grid-template-areas: "stack";
-}
-
-.parallax > * {
-  grid-area: stack;
-  animation: parallax linear;
-  animation-timeline: scroll();
+  height: 100vh;
+  transform-style: preserve-3d;
+  z-index: -1;
 }
 
 .parallax > img {
@@ -43,27 +31,22 @@
 }
 
 .parallax__background {
-  --parallax-speed: 220;
   z-index: 2;
 }
 
 .parallax__bottom {
-  --parallax-speed: 230;
   z-index: 3;
 }
 
 .parallax__center {
-  --parallax-speed: 200;
   z-index: 4;
 }
 
 .parallax__leftcenter {
-  --parallax-speed: 150;
   z-index: 5;
 }
 
 .parallax__rightcenter {
-  --parallax-speed: 40;
   z-index: 6;
 }
 
@@ -72,8 +55,21 @@
 }
 
 .parallax__upperright {
-  --parallax-speed: 160;
   z-index: 8;
+}
+
+.parallax__background,
+.parallax__bottom,
+.parallax__center,
+.parallax__leftcenter,
+.parallax__rightcenter,
+.parallax__upperleft,
+.parallax__upperright   {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
 
 .parallax__content {
