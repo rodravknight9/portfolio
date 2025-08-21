@@ -53,7 +53,7 @@ export const Footer = () => {
                     <Resource key={index} href={resource.href} icon={resource.icon} />
                 ))}
             </div>
-            <div className='flex flex-col sm:flex-row text-sm gap-4 md:text-2xl mt-8'>
+            <div className='flex grow flex-wrap justify-center  text-sm gap-4 md:text-2xl mt-8'>
                 {sections.map((section, index) => (
                     <Section 
                         key={index}

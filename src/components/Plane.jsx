@@ -1,6 +1,6 @@
 import { Canvas, useThree } from '@react-three/fiber';
 import { useGLTF, useAnimations } from '@react-three/drei';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 
 function Model() {
@@ -8,8 +8,21 @@ function Model() {
   const modelRef = useRef();
   const { camera } = useThree();
   const { actions } = useAnimations(glft.animations, modelRef);
+  const [scale, setScale] = useState(3);
 
   useEffect(() => {
+
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setScale(2.5)
+      } else if (window.innerWidth < 1024) {
+        setScale(3)
+      }
+    }
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
    const model = modelRef.current;
     if (!model) return;
 
@@ -18,16 +31,20 @@ function Model() {
     modelRef.current.position.sub(center);
 
     const size = box.getSize(new THREE.Vector3()).length();
-    const scale = 3; // size;
     model.scale.set(scale, scale, scale);
 
+    // update if in a future the airplane is gonna move along with scroll
     const distance = (size * 1.8) / scale;
     camera.position.set(0, 0, distance);
     camera.lookAt(0, 0, 0);
 
     actions['Flying'].play();
 
-  }, [glft, camera, actions]);
+   return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+
+  }, [glft, camera, actions, scale]);
   
   return (
     <mesh ref={modelRef} rotation={[0, -0.8, 0]}>

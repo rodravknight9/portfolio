@@ -13,7 +13,7 @@ const ServiceCard = (service) => {
 
 export const Services = () => {
     return (
-        <div className='w-3/5 justify-self-center mx-auto py-10'>
+        <div className='w-6/7 md:w-3/5 justify-self-center mx-auto py-10'>
             <h1 className='text-4xl font-semibold mt-10 col-span-12 mb-12'>Services</h1>
             <div className='flex flex-row gap-6 flex-wrap self-justify-center justify-center'>
             {
