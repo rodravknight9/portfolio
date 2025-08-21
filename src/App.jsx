@@ -29,7 +29,6 @@ function App() {
   
 
    return (
-
       <div className='relative wrapper' ref={wrapperRef}>
         <Hero scrollPosition={scrollPosition}/>
         <div className='sky-gradient z-30' id='about-me'>
