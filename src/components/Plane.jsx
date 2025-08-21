@@ -39,7 +39,7 @@ function Model() {
 
 export const Plane = () => {
     return (
-        <div className='w-full h-screen z-10 bg-sky'>
+        <div className='w-full h-screen z-10 bg-transparent'>
             <Canvas>
                 <directionalLight position={[10, 4, 5]} intensity={8} />
                 <ambientLight intensity={6} />
