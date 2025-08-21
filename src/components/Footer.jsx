@@ -47,13 +47,13 @@ const Section = ({ sectionName, sectionLink }) => {
 
 export const Footer = () => {
     return (
-        <div className='w-2/3 flex flex-col items-center justify-center mx-auto py-10'>
+        <div className=' w-full lg:w-2/3 flex flex-col items-center justify-center mx-auto py-10'>
             <div className='flex flex-row gap-4 text-2xl'>
                 {resources.map((resource, index) => (
                     <Resource key={index} href={resource.href} icon={resource.icon} />
                 ))}
             </div>
-            <div className='flex flex-row gap-4 text-2xl mt-8'>
+            <div className='flex flex-col sm:flex-row text-sm gap-4 md:text-2xl mt-8'>
                 {sections.map((section, index) => (
                     <Section 
                         key={index}
@@ -62,7 +62,7 @@ export const Footer = () => {
                     />))}
             </div>
              <div className='flex flex-row gap-4 text-2xl mt-8'>
-                <p className='text-lg'>Inspired by the Forrest Knight's portfolio | Made in React</p>
+                <p className='text-sm sm:text-lg'>Inspired by the Forrest Knight's portfolio | Made in React</p>
             </div>
         </div>
     )

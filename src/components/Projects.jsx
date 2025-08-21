@@ -2,7 +2,7 @@ import { projects } from '../data'
 
 const ProjectCard = ({ project }) => {
     return (
-        <div className="bg-gray-950 p-12 my-6 sm:w-4/5 md:w-4/5 lg:w-1/3 border-2 border-gray-800 transition delay-150 duration-300 ease-in-out hover:border-indigo-900">
+        <div className="bg-gray-950 p-12 my-6 sm:w-4/5 md:w-4/5 lg:w-2/3 xl:w-1/3 border-2 border-gray-800 transition delay-150 duration-300 ease-in-out hover:border-indigo-900">
             <img 
                 src={project.image} 
                 alt={project.title} 

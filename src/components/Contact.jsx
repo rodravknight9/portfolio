@@ -2,9 +2,9 @@ import React from 'react'
 
 export const Contact = () => {
     return (
-        <div className='w-2/3 self-justify-center mx-auto py-10 flex flex-col items-center justify-center'>
+        <div className='w-full sm:w-2/3 self-justify-center mx-auto py-10 flex flex-col items-center justify-center'>
             <h1 className='text-3xl font-bold mt-10 col-span-12 mb-12'>Contact</h1>
-            <form action="" className='w-1/2'>
+            <form action="" className='w-6/7 lg:w-1/2'>
                 <div className='mx-3 my-4'>
                     <span className='text-white '>Full Name</span>
                     <input 

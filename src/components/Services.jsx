@@ -3,7 +3,7 @@ import { services } from '../data'
 
 const ServiceCard = (service) => {
     return (
-        <div className='w-2/5 bg-gray-950 p-12 my-6 border-2 border-gray-800 transition delay-150 duration-300 ease-in-out hover:border-indigo-900'>
+        <div className='sm:w-5/5 md:w-4/5 lg:w-4/5 xl:w-2/5 bg-gray-950 p-12 my-6 border-2 border-gray-800 transition delay-150 duration-300 ease-in-out hover:border-indigo-900'>
             <h3 className='text-xl font-bold mb-3'>{service.name}</h3>
             <p>{service.description}</p>
         </div>

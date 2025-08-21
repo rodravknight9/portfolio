@@ -1,15 +1,35 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { experience } from '../data'
 
-const ExperienceTitle = ({ isActive, experience, onClick }) => {
-    return (
-        <ul
-            onClick={onClick} 
-            className={`py-5 px-10 text-xl cursor-pointer ${isActive ? 'border-l-4 border-indigo-300 text-indigo-300' : ''}`}
-        >
-            { experience.title }
-        </ul>
-    )
+const ExperienceTitle = ({ isActive, experience, onClick, isMobile }) => {
+
+    if(isMobile)
+    {
+        return (
+            <ul
+                onClick={onClick} 
+                className={`py-5 px-10 text-sm font-bold cursor-pointer justify-self-center text-indigo-300`}
+            >
+                <p className='justify-self-center'>
+                    { experience.companyName }
+                </p>
+                <p className='text-white justify-self-center font-normal'>{ experience.title} | { experience.duration}</p>
+            </ul>
+        )
+    }
+    else
+    {
+        return (
+            <ul
+                onClick={onClick} 
+                className={`py-5 px-10 text-xl cursor-pointer ${isActive ? 'border-l-4 border-indigo-300 text-indigo-300' : ''}`}
+            >
+                { experience.title }
+            </ul>
+        )
+    }
+
+    
 }
 
 const ExperienceDescription = ({ experience }) => {
@@ -26,14 +46,30 @@ const ExperienceDescription = ({ experience }) => {
 export const Experience = () => {
 
     const [selectedExperience, setSetselectedExperience] = useState(experience[0]);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 640);
+        };
+
+        handleResize();
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+        window.removeEventListener("resize", handleResize);
+        };
+    }, []);
 
     return (
-        <div className='justify-self-center w-2/3 py-10'>
+        <div className='justify-self-center sm:w-3/3 lg:w-2/3 py-10'>
             <div className='grid grid-cols-13 p-10 gap-5'>
                 <h1 className='text-3xl font-bold mt-10 col-span-12 mb-12'>Experience</h1>
-                <li className='list-none col-span-4 bg-slate-950 py-3'>
+
+                <li className='list-none sm:col-span-4 col-span-12 bg-slate-950 py-3'>
                     {experience.map((exp, index) => (
                         <ExperienceTitle 
+                            isMobile={isMobile}
                             key={index} 
                             isActive={selectedExperience === exp} 
                             experience={exp}
@@ -41,9 +77,13 @@ export const Experience = () => {
                         />
                     ))}
                 </li>
-                <div className="col-span-9">
-                    <ExperienceDescription experience={selectedExperience} />
-                </div>
+
+                {
+                    !isMobile &&
+                    <div className="col-span-12 sm:col-span-9">
+                        <ExperienceDescription experience={selectedExperience} />
+                    </div>
+                }
             </div>
         </div>
     )
