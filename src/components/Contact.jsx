@@ -47,7 +47,7 @@ export const Contact = () => {
                         type='submit' 
                         className='text-white  p-3 py-2 border-2 border-gray-500 transition hover:cursor-pointer hover:border-indigo-300'
                     >
-                       { isLoading ? 'Sending...' : 'Send' }
+                       { 'Send' }
                     </button>
                 </div>
             </form>
