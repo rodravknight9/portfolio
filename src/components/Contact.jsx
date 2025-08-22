@@ -1,34 +1,11 @@
-import React, { useRef, useState } from 'react'
-import emailjs from '@emailjs/browser'
-
 export const Contact = () => {
 
-    const form = useRef();
-    const [isLoading, setIsLoading] = useState(false);
-
-    const sendEmail = (e) => {
-        e.preventDefault();
-        setIsLoading(true);
-        console.log(form)
-        console.log(import.meta.env.VITE_EMAILJS_SERVICE_ID)
-        const options = {
-            publicKey: import.meta.env.VITE_EMAILJS_USER_ID
-        }
-        emailjs.sendForm(
-            import.meta.env.VITE_EMAILJS_SERVICE_ID, 
-            import.meta.env.VITE_EMAILJS_TEMPLATE_ID, 
-            form.current, options)
-            .then(
-                (res) => setIsLoading(false),
-                (err) => console.log(err)
-            );
-    }
-
+    // well better to use getform.io lol forget about emailjs, is not really safe :(
 
     return (
         <div className='w-full sm:w-2/3 self-justify-center mx-auto py-10 flex flex-col items-center justify-center'>
             <h1 className='text-3xl font-bold mt-10 col-span-12 mb-12'>Contact</h1>
-            <form action="POST" className='w-6/7 lg:w-1/2' ref={form} onSubmit={sendEmail}>
+            <form className='w-6/7 lg:w-1/2' action="https://getform.io/f/ajjrmwka" method="POST">
                 <div className='mx-3 my-4'>
                     <span className='text-white '>Full Name</span>
                     <input 
