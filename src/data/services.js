@@ -1,18 +1,18 @@
 export const services = [
     {
-        name: 'Backend Development',
-        description: 'In the field of backend technology, I am capable of developing new solutions or even maintaining existing projects. I can transform business ideas and requirements into a scalable product. Creating readable code, following best practices and the latest design trends, is essential for me.'
+        "name": "Backend Development",
+        "description": "I specialize in backend development, building new solutions as well as maintaining existing systems. I can transform business ideas and requirements into scalable, reliable products. Writing clean, readable code while following best practices and modern design patterns is a core part of my approach."
     },
     {
-        name: 'Frontend Development',
-        description: 'In the field of frontend technology, I am able to create new solutions or integrate into an existing project for its maintenance. In this part, I can focus on the UX of the application for the comfort of the end user, delivering a well-structured project with clean code.'
+        "name": "Frontend Development",
+        "description": "I create intuitive and responsive frontend solutions, whether starting new projects or contributing to ongoing ones. My focus is on delivering smooth user experiences and well-structured applications with clean, maintainable code."
     },
     {
-        name: 'System Design',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam commodi perfer'
+        "name": "System Design",
+        "description": "I design robust system architectures tailored to meet business goals and ensure long-term scalability. My approach involves analyzing requirements, defining clear structures, and aligning technical decisions with best practices."
     },
     {
-        name: 'Leadership',
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam commodi perfer'
+        "name": "Leadership",
+        "description": "I provide leadership through mentoring, collaboration, and guiding teams toward effective solutions. My focus is on fostering a productive environment where technical excellence and teamwork drive project success."
     }
 ]

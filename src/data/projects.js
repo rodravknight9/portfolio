@@ -20,7 +20,7 @@ export const projects = [
     {
         id: 'LXLRN',
         title: 'Lexilearn',
-        description: 'An educational platform that provides resources and tools for language learning.',
+        description: '(IN PROGRESS) An educational platform that provides resources and tools for language learning.',
         image: '/lexilearn.png',
         platform: 'fa-brands fa-github',
         githubLink: 'https://github.com/rodravknight9/lexilearn-api',
