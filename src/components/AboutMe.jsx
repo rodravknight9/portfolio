@@ -17,7 +17,7 @@ export const AboutMe = () => {
                 </p>
                 <div className='flex flex-row gap-4'>
                    {resources.map((resource, index) => (
-                        <Resource key={index} href={resource.href} icon={resource.icon} />
+                        <Resource key={index} href={resource.url} icon={resource.icon} />
                     ))}
                 </div>
             </div>

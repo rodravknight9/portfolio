@@ -6,7 +6,7 @@ const ProjectCard = ({ project }) => {
             <img 
                 src={project.image} 
                 alt={project.title} 
-                className="w-3/5 h-80 object-cover justify-self-center border-2 border-indigo-900 " 
+                className="w-6/7 h-80 object-cover justify-self-center border-2 border-indigo-900 " 
                 />
             <h1 className="text-2xl font-semibold mt-4 justify-self-center">{project.title}</h1>
             <div className='my-6 px-3'>
@@ -24,7 +24,10 @@ const ProjectCard = ({ project }) => {
                     rel="noopener noreferrer" 
                     className="mx-2 mt-4 inline-block text-3xl"
                 >
-                    <i className="fa-brands fa-github text-white hover:text-indigo-300"></i>
+                    <div className='flex flex-row justify-center items-center'>
+                        <i className={` ${project.platform} text-white hover:text-indigo-300`}></i>
+                        <span className='text-sm text-white ml-2 hover:text-indigo-300'>Source Code</span>
+                    </div>
                 </a>
             )}
         </div>

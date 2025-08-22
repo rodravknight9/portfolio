@@ -64,7 +64,7 @@ export const Experience = () => {
     return (
         <div className='justify-self-center sm:w-3/3 lg:w-2/3 py-10'>
             <div className='grid grid-cols-13 p-10 gap-5'>
-                <h1 className='text-3xl font-bold mt-10 col-span-12 mb-12'>Experience</h1>
+                <h1 className='justify-self-center sm:justify-self-auto text-3xl font-bold mt-10 col-span-12 mb-12'>Experience</h1>
 
                 <li className='list-none sm:col-span-4 col-span-12 bg-slate-950 py-3'>
                     {experience.map((exp, index) => (

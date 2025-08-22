@@ -31,6 +31,7 @@ function App() {
    return (
       <div className='relative wrapper' ref={wrapperRef}>
 
+        <span id='hero'></span>
         <Hero scrollPosition={scrollPosition} />
         <div className='sky-gradient z-30' id='about-me'>
           <AboutMe />

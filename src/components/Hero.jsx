@@ -1,5 +1,3 @@
-
-import React from 'react'
 import { Plane } from './Plane'
 
 const Hero = ({ scrollPosition }) => {
@@ -34,7 +32,6 @@ const Hero = ({ scrollPosition }) => {
         }
 }
 
-    console.log(scrollPosition)
 
     return (
         <section className="parallax">

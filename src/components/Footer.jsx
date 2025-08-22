@@ -50,7 +50,7 @@ export const Footer = () => {
         <div className=' w-full lg:w-2/3 flex flex-col items-center justify-center mx-auto py-10'>
             <div className='flex flex-row gap-4 text-2xl'>
                 {resources.map((resource, index) => (
-                    <Resource key={index} href={resource.href} icon={resource.icon} />
+                    <Resource key={index} href={resource.url} icon={resource.icon} />
                 ))}
             </div>
             <div className='flex grow flex-wrap justify-center  text-sm gap-4 md:text-2xl mt-8'>
