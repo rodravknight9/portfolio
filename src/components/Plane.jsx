@@ -16,7 +16,9 @@ function Model() {
       if (window.innerWidth < 768) {
         setScale(2.5)
       } else if (window.innerWidth < 1024) {
-        setScale(3)
+        setScale(2.7)
+      } else {
+        setScale(2.2)
       }
     }
 
