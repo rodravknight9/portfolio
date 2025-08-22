@@ -1,12 +1,13 @@
-# React + Vite
+# 3D Portfolio 
+This is a 3D portfolio available in: https://roderknight.me
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Building this website was inspired by Forrest Knight's 3D portfolio that actually has the "wow" factor indeed. I had much time wanting to build a personal website so here it is, it has some features I liked about many portfolios and web pages I've seen so far from people and friends that I admire. So here any employer can take a look to all projects I have been invloved as a Software Engineer. And yes, for the parallax effect it was tricky, specially in the way I cut the image, I hope any designer doesn't get offended by the work that I did with that, was my first time using Gimp. :/
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Tech Stack
+- React with Vite - JavaScript library for building websites
+- JavaScript - Programming language
+- Tailwind - CSS framework
+- Three.js - 3D graphics
+- Netifly - Web hosting platform
+- GitHub - Version control 
+- Gimp - Bitmap graphics editor

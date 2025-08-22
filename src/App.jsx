@@ -45,7 +45,7 @@ function App() {
         <div className='w-full bg-gray-950 z-30' id='services'>
           <Services />
         </div>
-        <div className='w-full bg-theme z-30'>
+        <div className='w-full bg-theme z-30' id='contact'>
           <Contact />
         </div>
         <div className="w-full z-30 bg-gray-950">

@@ -62,7 +62,7 @@ export const Footer = () => {
                     />))}
             </div>
              <div className='flex flex-row gap-4 text-2xl mt-8'>
-                <p className='text-sm sm:text-lg'>Inspired by the Forrest Knight's portfolio | Made in React</p>
+                <p className='text-sm sm:text-lg'>Inspired by the Forrest Knight's portfolio { window.innerWidth < 768 ? <br /> :'|' } Made in React</p>
             </div>
         </div>
     )

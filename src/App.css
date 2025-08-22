@@ -1,7 +1,13 @@
 @import "tailwindcss";
 
 .sky-gradient {
-  background: linear-gradient(to bottom, #0220A5 0%, #0A0D21 25%); /* Sky blue to light blue */
+  background: linear-gradient(to bottom, #0220A5 0%, #0A0D21 25%);
+}
+
+.cedarville-cursive-regular {
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .wrapper {

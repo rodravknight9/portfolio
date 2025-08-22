@@ -57,16 +57,16 @@ export const Experience = () => {
         window.addEventListener("resize", handleResize);
 
         return () => {
-        window.removeEventListener("resize", handleResize);
+            window.removeEventListener("resize", handleResize);
         };
     }, []);
 
     return (
-        <div className='justify-self-center sm:w-3/3 lg:w-2/3 py-10'>
-            <div className='grid grid-cols-13 p-10 gap-5'>
-                <h1 className='justify-self-center sm:justify-self-auto text-3xl font-bold mt-10 col-span-12 mb-12'>Experience</h1>
+        <div className='justify-self-center w-full md:w-2/3 md:py-10 py-3'>
+            <div className='grid grid-cols-13 md:p-10 gap-5'>
+                <h1 className='justify-self-center sm:justify-self-auto text-3xl font-bold mt-10 col-span-12 md:mb-12 mb-4'>Experience</h1>
 
-                <li className='list-none sm:col-span-4 col-span-12 bg-slate-950 py-3'>
+                <li className='list-none sm:col-span-4 col-span-13 bg-slate-950 sm:py-3 '>
                     {experience.map((exp, index) => (
                         <ExperienceTitle 
                             isMobile={isMobile}
@@ -80,7 +80,7 @@ export const Experience = () => {
 
                 {
                     !isMobile &&
-                    <div className="col-span-12 sm:col-span-9">
+                    <div className="col-span-13 sm:col-span-9">
                         <ExperienceDescription experience={selectedExperience} />
                     </div>
                 }

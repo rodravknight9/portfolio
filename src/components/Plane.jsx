@@ -13,12 +13,19 @@ function Model() {
   useEffect(() => {
 
     const handleResize = () => {
-      if (window.innerWidth < 768) {
-        setScale(2.5)
+
+      if(window.innerWidth < 520){
+        setScale(2)
+      }
+      else if (window.innerWidth < 768) {
+        setScale(2.3)
       } else if (window.innerWidth < 1024) {
+        setScale(2.5)
+      } else if (window.innerWidth < 1280) {
         setScale(2.7)
-      } else {
-        setScale(2.2)
+      }
+      else {
+        setScale(3)
       }
     }
 

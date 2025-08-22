@@ -1,10 +1,21 @@
+import { useEffect, useState } from 'react'
 import { Plane } from './Plane'
 
 const Hero = ({ scrollPosition }) => {
 
+    const [backgroundScale, setBackgroundScale] = useState(9);
+
+    useEffect(() => {
+      if(window.innerWidth < 768){
+        setBackgroundScale(7)
+      }
+
+    }, [backgroundScale])
+    
+
     const parallaxStyles = {
         background: {
-            transform: `translateY(${scrollPosition * 0.1}px) translateZ(-20px) scale(3)`,
+            transform: `translateY(${scrollPosition * 0.1}px) translateZ(-60px) scale(${backgroundScale})`,
         },
         bottom: {
             //transform: `translateY(${scrollPosition * 1}px) translateZ(0px) scale(1)`,
@@ -19,16 +30,8 @@ const Hero = ({ scrollPosition }) => {
         upperright: {
             transform: `translateY(${scrollPosition * 0.5}px) translateZ(-10px) scale(2)`
         },
-        // center: {
-        //      transform: `translateY(${scrollPosition * 0.0001}px) translateZ(-19px) scale(3)`,
-        //      zIndex: 5
-        // },
-        // rightcenter: {
-        //      transform: `translateY(${scrollPosition * 0.0001}px) translateZ(-19px) scale(3)`,
-        //      zIndex: 6
-        // }
         banner: {
-             transform: `translateY(${scrollPosition * 0.7}px) translateZ(-12px) scale(2)`,
+             transform: `translateY(${scrollPosition * 0.1}px) translateZ(-12px) scale(2)`,
         }
 }
 
@@ -37,17 +40,19 @@ const Hero = ({ scrollPosition }) => {
         <section className="parallax">
             <div
                 style={parallaxStyles.banner} 
-                className='parallax__content absolute top-[10%] sm:top-[16%] lg:top-[24%] w-full mx-auto lg:pl-[38vh] lg:pr-[30vh] xl:pl-96 xl:pr-72 2xl:px-40 3xl:px-60 flex flex-col lg:flex-row items-start z-10'>
+                className='parallax__content absolute sm:top-[5%] w-full mx-auto flex flex-col xl:flex-row items-start z-10 flex-wrap grow '>
                 <div className="flex-1 lg:mb-0">
-                <h1 className='font-medium text-white text-[40px] xs:text-[50px] sm:text-[68px] md:text-[80px] lg:text-[100px] 2xl:text-[80px] leading-[110px] 2xl:leading-[160px]'>
-                    Rodrigo Alarcon
-                </h1>
-                {/* <Position /> */}
+                    <h1 className='font-medium text-white text-[40px] xs:text-[50px] sm:text-[68px] md:text-[80px] lg:text-[75px] leading-[110px] 2xl:leading-[160px] ml-2 md:ml-20'>
+                        Rodrigo Alarcon
+                    </h1>
+                    <h3 className='ml-2 md:ml-20 cedarville-cursive-regular text-[40px] sm:text-[60px] text-white'>
+                        Software Developer.
+                    </h3>
                 </div>
                 <div className="flex-1 flex justify-start lg:justify-end mt-4 sm:mt-14 ml-8 xs:ml-[-4vh] sm:ml-[-17vh] md:ml-[-26vh] lg:mt-10 2xl:mt-0">
-                <div className='font-bold text-[20px] sm:text-[30px] md:text-[36px] 2xl:text-[46px] sm:leading-[40px] md:leading-[50px] 2xl:leading-[60px] streaky-glow max-w-sm 2xl:max-w-lg text-white text-left'>
-                    I love crafting <br/> captivating experiences for the digital world to savor.
-                </div>
+                    <div className='cedarville-cursive-regular font-bold text-[25px] sm:text-[33px] md:text-[36px] 2xl:text-[46px] sm:leading-[50px] md:leading-[57px] 2xl:leading-[60px] streaky-glow max-w-sm 2xl:max-w-lg text-white text-left'>
+                        I love building meaningful software <br /> that connects people and ideas.
+                    </div>
                 </div>
             </div>
 
