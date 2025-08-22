@@ -15,7 +15,7 @@ function Model() {
     const handleResize = () => {
 
       if(window.innerWidth < 520){
-        setScale(2)
+        setScale(2.1)
       }
       else if (window.innerWidth < 768) {
         setScale(2.3)
@@ -23,9 +23,10 @@ function Model() {
         setScale(2.5)
       } else if (window.innerWidth < 1280) {
         setScale(2.7)
-      }
-      else {
-        setScale(3)
+      } else if (window.innerWidth < 1536) {
+        setScale(2.8)
+      } else {
+        setScale(2.7);
       }
     }
 
