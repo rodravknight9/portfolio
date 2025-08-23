@@ -32,7 +32,7 @@ const Hero = ({ scrollPosition }) => {
         banner: {
              transform: `translateY(${scrollPosition * 0.1}px) translateZ(-12px) scale(2)`,
         }
-}
+    }
 
 
     return (
@@ -48,23 +48,22 @@ const Hero = ({ scrollPosition }) => {
                         Software Developer.
                     </h3>
                 </div>
-                <div className="flex-1 flex justify-start lg:justify-end mt-4 sm:mt-14 ml-8 xs:ml-[-4vh] sm:ml-[-17vh] md:ml-[-26vh] lg:mt-10 2xl:mt-0">
-                    <div className='cedarville-cursive-regular font-bold text-[25px] sm:text-[33px] md:text-[36px] 2xl:text-[46px] sm:leading-[50px] md:leading-[57px] 2xl:leading-[60px] streaky-glow max-w-sm 2xl:max-w-lg text-white text-left'>
+                <div className="flex-1 flex justify-start lg:justify-end mt-4 ml-8">
+                    <div className='cedarville-cursive-regular text-[25px] sm:text-[33px] 2xl:text-[46px] 2xl:max-w-lg text-white text-left'>
                         I love building meaningful software <br /> that connects people and ideas.
                     </div>
                 </div>
             </div>
 
-            <img className="parallax__background" src="./parallax/background.png" alt="" style={parallaxStyles.background}/>
+            <img className="parallax__background" src="./parallax/background.webp" alt="" style={parallaxStyles.background}/>
             <img className="parallax__bottom" src="./parallax/bottom.png" alt="" style={parallaxStyles.bottom}/>
-            <img className="parallax__center" src="./parallax/center.png" alt="" style={parallaxStyles.center}/>
             <img className="parallax__leftcenter" src="./parallax/leftcenter.png" alt="" style={parallaxStyles.leftcenter}/> 
             <img className="parallax__rightcenter" src="./parallax/rightcenter.png" alt="" style={parallaxStyles.rightcenter}/>
             <img className="parallax__upperleft" src="./parallax/upperleft.png" alt="" style={parallaxStyles.upperleft}/>
             <img className="parallax__upperright" src="./parallax/upperright.png" alt="" style={parallaxStyles.upperright}/>
 
             <div className='z-10 w-full h-screen absolute top-0 left-0 bg-transparent'>
-                <Plane />
+                <Plane /> 
             </div>
         </section>
     )
