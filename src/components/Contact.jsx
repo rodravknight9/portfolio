@@ -12,6 +12,7 @@ export const Contact = () => {
                         type="text" 
                         name='full_name'
                         id='full_name'
+                        autoComplete="off"
                         className='border-2 border-gray-500 px-3 py-2 w-full focus:border-indigo-300 focus:outline-none'
                         />
                 </div>
@@ -21,6 +22,7 @@ export const Contact = () => {
                         type="text" 
                         name='subject'
                         id='subject'
+                        autoComplete="off"
                         className='border-2 border-gray-500 px-3 py-2 w-full focus:border-indigo-300 focus:outline-none'
                         />
                 </div>
@@ -30,6 +32,7 @@ export const Contact = () => {
                         type="text" 
                         name='email'
                         id='email'
+                        autoComplete="off"
                         className='border-2 border-gray-500 text-white px-3 py-2 w-full focus:border-indigo-300 focus:outline-none'
                         />
                 </div>

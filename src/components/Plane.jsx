@@ -45,7 +45,7 @@ function Model() {
 
     // update if in a future the airplane is gonna move along with scroll
     const distance = (size * 1.8) / scale;
-    camera.position.set(0, 0, distance);
+    camera.position.set(0.1, 0, distance);
     camera.lookAt(0, 0, 0);
 
     actions['Flying'].play();

@@ -17,15 +17,14 @@ const Hero = ({ scrollPosition }) => {
         background: {
             transform: `translateY(${scrollPosition * 0.1}px) translateZ(-60px) scale(${backgroundScale})`,
         },
-        bottom: {
-            //transform: `translateY(${scrollPosition * 1}px) translateZ(0px) scale(1)`,
-            zIndex: 2
-        },
         upperleft: {
             transform: `translateY(${scrollPosition * 0.7}px) translateZ(-20px) scale(3)`,
         },
         leftcenter: {
             transform: `translateY(${scrollPosition * 0.05}px) translateZ(-20px) scale(3)`
+        },
+        rightcenter: {
+            transform: `translateY(${scrollPosition * 0.1}px) translateZ(-40px) scale(5)`
         },
         upperright: {
             transform: `translateY(${scrollPosition * 0.5}px) translateZ(-10px) scale(2)`
