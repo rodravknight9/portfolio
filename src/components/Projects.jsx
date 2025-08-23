@@ -1,4 +1,5 @@
 import { projects } from '../data'
+import { SVG } from './Resource'
 
 const ProjectCard = ({ project }) => {
     return (
@@ -25,7 +26,7 @@ const ProjectCard = ({ project }) => {
                     className="mx-2 mt-4 inline-block text-3xl"
                 >
                     <div className='flex flex-row justify-center items-center'>
-                        <i className={` ${project.platform} text-white hover:text-indigo-300`}></i>
+                        <SVG name={project.platform}/>
                         <span className='text-sm text-white ml-2 hover:text-indigo-300'>Source Code</span>
                     </div>
                 </a>
