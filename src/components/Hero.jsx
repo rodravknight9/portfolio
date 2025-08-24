@@ -56,11 +56,11 @@ const Hero = ({ scrollPosition }) => {
             </div>
 
             <img className="parallax__background" src="./parallax/background.webp" alt="" style={parallaxStyles.background}/>
-            <img className="parallax__bottom" src="./parallax/bottom.png" alt="" style={parallaxStyles.bottom}/>
-            <img className="parallax__leftcenter" src="./parallax/leftcenter.png" alt="" style={parallaxStyles.leftcenter}/> 
-            <img className="parallax__rightcenter" src="./parallax/rightcenter.png" alt="" style={parallaxStyles.rightcenter}/>
-            <img className="parallax__upperleft" src="./parallax/upperleft.png" alt="" style={parallaxStyles.upperleft}/>
-            <img className="parallax__upperright" src="./parallax/upperright.png" alt="" style={parallaxStyles.upperright}/>
+            <img className="parallax__bottom" src="./parallax/bottom.webp" alt="" style={parallaxStyles.bottom}/>
+            <img className="parallax__leftcenter" src="./parallax/leftcenter.webp" alt="" style={parallaxStyles.leftcenter}/> 
+            <img className="parallax__rightcenter" src="./parallax/rightcenter.webp" alt="" style={parallaxStyles.rightcenter}/>
+            <img className="parallax__upperleft" src="./parallax/upperleft.webp" alt="" style={parallaxStyles.upperleft}/>
+            <img className="parallax__upperright" src="./parallax/upperright.webp" alt="" style={parallaxStyles.upperright}/>
 
             <div className='z-10 w-full h-screen absolute top-0 left-0 bg-transparent'>
                 <Plane /> 
