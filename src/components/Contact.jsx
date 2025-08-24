@@ -7,7 +7,7 @@ export const Contact = () => {
             <h1 className='text-3xl font-bold mt-10 col-span-12 mb-12'>Contact</h1>
             <form className='w-6/7 lg:w-1/2' action="https://getform.io/f/ajjrmwka" method="POST">
                 <div className='mx-3 my-4'>
-                    <span className='text-white '>Full Name</span>
+                    <label htmlFor="full_name">Full Name</label>
                     <input 
                         type="text" 
                         name='full_name'
@@ -17,7 +17,7 @@ export const Contact = () => {
                         />
                 </div>
                  <div className='mx-3 my-4'>
-                    <span className='text-white '>Subject</span>
+                    <label htmlFor="subject">Subject</label>
                     <input 
                         type="text" 
                         name='subject'
@@ -27,9 +27,9 @@ export const Contact = () => {
                         />
                 </div>
                 <div className='mx-3 my-4'>
-                    <span>Email</span>
+                    <label htmlFor="email">Email</label>
                     <input 
-                        type="text" 
+                        type="email" 
                         name='email'
                         id='email'
                         autoComplete="off"
@@ -37,7 +37,7 @@ export const Contact = () => {
                         />
                 </div>
                 <div className='mx-3 my-4'>
-                    <span>Message</span>
+                    <label htmlFor="message">Message</label>
                     <textarea 
                         name="message" 
                         id="message"
